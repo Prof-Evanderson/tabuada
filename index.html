@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competição de Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Competição de Tabuada</h1>
+        <div id="start-screen">
+            <label for="player-name" id="nome-jogador">Nome do Jogador:</label>
+            <input type="text" id="player-name">
+            <button onclick="startGame()">Iniciar</button>
+        </div>
+        <div id="game-screen" style="display:none;">
+            <div id="question"></div>
+            <input type="text" id="answer" onkeypress="checkAnswer(event)">
+            <div id="timer"></div>
+            <div id="score">Pontuação: 0</div>
+        </div>
+        <div id="end-screen" style="display:none;">
+            <h2>Fim do Jogo!</h2>
+            <div id="final-score"></div>
+            <button onclick="showRanking()">Ver Ranking</button>
+        </div>
+        <div id="ranking-screen" style="display:none;">
+            <h2>Ranking</h2>
+            <div id="ranking"></div>
+            <button onclick="restartGame()">Reiniciar Jogo</button>
+        </div>
+        <div id="autor">Desenvolvido por Evanderson Lobo</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
